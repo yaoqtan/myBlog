@@ -1,0 +1,35 @@
+{
+    "status": 0,
+    "detail": {
+        "id": 729,
+        "createTime": 1475141035000,
+        "startTime": 1475141035000,
+        "startPrice": 14.92,
+        "lastPrice": 14.7,
+        "targetPrice": "",
+        "stopPrice": "",
+        "avgProfitRate":"23",
+        "stockResponseObject": {
+            "id": "00003.HK",
+            "exchange": 2,
+            "code": "00003",
+            "name": "香港中華煤氣",
+            "nameCn": "香港中华煤气",
+            "nameEn": "HK & CHINA GAS"
+        },
+        "callMemberResponseObjectList": [
+            {
+                "id": 106,
+                "name": "lung",
+                "imageUrl": "https://gz.gtomato.com/aladdin/files/avatar/73.jpg",
+                "backgroundUrl": "https://gz.gtomato.com/aladdin/files/background/4.jpg",
+                "gender": "F",
+                "type": "aladdin"
+            }
+        ],
+        "stopLoss": 10,
+        "stopProfit": 20,
+        "calling": 30,
+        "status": 0
+    }
+}
