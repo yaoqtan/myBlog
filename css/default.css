@@ -1,3 +1,27 @@
 body{
 	margin:0;
 }
+h2{
+	margin-bottom: 10px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+.sub-title{
+	text-align: center;
+}
+ul,li{
+	list-style: none;
+}
+li,a{
+	min-height: 1em;
+    color: rgb(62, 62, 62);
+    font-size: 16px;
+    line-height: 25.6px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    color: #607fa6;
+    text-decoration: none;
+}
