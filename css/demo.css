@@ -41,10 +41,11 @@
                 font-size: 18px;
             }
             .demo p{
-                font-size: 14px;
+                font-size: 15px;
             }
             .demo ul,.demo ul li{
                 margin-left: 10px;
+                font-size: 15px;
             }
             .demo ul.disc,.demo ul.desc li{
                 list-style-type: disc;
@@ -53,7 +54,7 @@
                 list-style-type: decimal;
             }
             .demo pre{
-                padding: 16px;
+                padding: 6px 16px;
                 overflow: auto;
                 font-size: 85%;
                 line-height: 1.45;
@@ -70,15 +71,28 @@
                 word-wrap: normal;
                 background-color: transparent;
                 border: 0;
-                font-size: 14px;
+                font-size: 16px;
             }
             .demo blockquote{
                 margin: 0;
                 padding-left: 10px;
                 border-left: 3px solid #dbdbdb;
             }
-            .demo img{
+            .demo img{display: block;margin: 0}
+            .demo img.center{
                 display: block;
                 max-width: 100%;                                
                 margin: 0 auto;
+            }
+            .demo hr{
+                display: block;
+                margin-bottom: 80px;
+                &:after{
+                    content: " ";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+
+                }
             }

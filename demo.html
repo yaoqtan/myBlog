@@ -2,192 +2,60 @@
 　　<html>
 　　<head>
 　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			/*reset css*/
-			html {
-			    -webkit-font-smoothing: antialiased;
-			    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-			    -webkit-touch-callout: none;
-			    -webkit-text-size-adjust: none;
-			    -moz-text-size-adjust: none;
-			    -ms-text-size-adjust: none;
-			    -o-text-size-adjust: none;
-			    text-size-adjust: none;
-			}
-			body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
-			    padding: 0px;
-			    margin: 0px;
-			}
-			table {
-			    border-collapse: collapse;
-			    border-spacing: 0;
-			}
-			fieldset, img {
-			    border: 0;
-			}
-			address, caption, cite, code, dfn, em, strong, th, var {
-			    font-weight: normal;
-			    font-style: normal;
-			}
-			ol, ul {
-			    list-style: none;
-			}
-			caption, th {
-			    text-align: left;
-			}
-			body {
-			    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
-			    font-size: 14px;
-			    background-color: #f5f5f5;
-			    color: #555;
-			    overflow-x: hidden;
-			}
-			h1, h2, h3, h4, h5, h6, ul, li {
-			    outline: 0 none;
-			    list-style: none;
-			    padding: 0;
-			    margin: 0;
-			}
-			h1, h2, h3, h4, h5, h6 {
-			    font-weight: normal;
-			    font-size: 100%;
-			}
-		</style>
-		<style type="text/css">
-			html,body{
-				background: #fff;
-			}
-
-			.demo{
-				margin:0 40px;
-
-			}
-			.demo *{line-height: 150%;margin-top: 10px;}
-			.demo h1{
-				border-bottom: 1px solid #eee;
-                padding-bottom: 10px;
-				font-size: 30px;
-			}
-			.demo h2{
-				margin-top: 20px;
-				border-bottom: 1px solid #eee;
-   				padding-bottom: 10px;
-   				font-size: 26px;
-			}
-			.demo h3{
-				margin-top: 10px;
-				border-bottom: 1px solid #eee;
-   				padding-bottom: 10px;
-   				font-size: 24px;
-			}
-			.demo h4{
-				margin-top: 10px;
-				border-bottom: 1px solid #eee;
-   				padding-bottom: 10px;
-   				font-size: 20px;
-			}
-			.demo h5{
-				margin-top: 5px;
-				border-bottom: 1px solid #eee;
-   				padding-bottom: 10px;
-   				font-size: 18px;
-			}
-			.demo p{
-				font-size: 14px;
-			}
-			.demo ul,.demo ul li{
-				margin-left: 10px;
-			}
-			.demo ul.disc,.demo ul.desc li{
-				list-style-type: disc;
-			}
-			.demo ul.decimal,.demo ul.decimal li{
-				list-style-type: decimal;
-			}
-			.demo pre{
-				padding: 16px;
-			    overflow: auto;
-			    font-size: 85%;
-			    line-height: 1.45;
-			    background-color: #f7f7f7;
-			    border-radius: 3px;
-			}
-			.demo code{
-			    display: inline;
-			    max-width: auto;
-			    padding: 0;
-			    margin: 0;
-			    overflow: visible;
-			    line-height: inherit;
-			    word-wrap: normal;
-			    background-color: transparent;
-			    border: 0;
-			    font-size: 14px;
-			}
-			.demo blockquote{
-				margin: 0;
-			    padding-left: 10px;
-			    border-left: 3px solid #dbdbdb;
-			}
-			.demo img{
-				display: block;
-				max-width: 100%;                                
-				margin: 0 auto;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/blog.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
 　　</head>
 	
 　　<body>
 	<div class = demo>
-　　　　<h1>居中布局</h1>
-		<h2>水平居中</h2>
-		<p>父元素和子元素的宽度都未知</p>
-		<h3>inline-block + text-ailgn</h3>
-		<pre>
-		<code>
-	.child{display:inline-block;}
-	.parent{text-align:center;}    
-		</code>
-		</pre>
-		<p>
-				优点：兼容性好<br>
-				缺点：子元素文本继承了text-align属性，子元素要额外加text-align:left;
-		</p>
-		<h4></h4>
-		<h5></h5>
-		<p></p>
-		<ul class ="">
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
+		<h2>什么是Angularjs</h2>
+		<p>AngularJS诞生于2009年，由Misko Hevery 等人创建，后被Google收购。是一款优秀的前端JS框架，已用于Google的多款产品当中 如Gmail、Maps、Calender 等。AngularJS有着诸多特性，最为核心的是：MVVM、模块化、自动化双向数据绑定、语义化标签(指令)、依赖注入</p>
+		<h2>AngularJS功能：</h2>
+		<p>AngularJS 是专门为应用程序（APP）设计的 HTML。<br>
+		  AngularJS 使得开发现代的单一页面应用程序（SPAs：Single Page Applications）变得更加容易。</p>
+		<h2>Angularjs号称 下一代web应用 主要特性如下：</h2>
+		<ul class = "decimal">
+			<li>MVC</li>
+			<li>模块化与依赖注</li>
+			<li>双向数据绑定</li>
+			<li>指令与UI控件</li>
 		</ul>
-		<ul class ="desc">
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-		</ul>
-		<ul class ="decimal">
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-			<li><p>优点：兼容性好</p></li>
-		</ul>
-		<pre><code></code></pre>
-		<blockquote>
-			<p>
-				优点：兼容性好<br>
-				缺点：子元素文本继承了text-align属性，子元素要额外加text-align:left;
-		</p>
-		</blockquote>
-	</div>
 
+		<h2>下载的两方式</h2>
+		<ul class = "decimal">
+			<li><a href = "http://www.bootcdn.cn/angular.js/"></a>(在国内)</li>
+			<li>通过nodejs下载：npm install angular 为</li>
+		</ul>
+		<h2>使用AngularJs 必须首先做的两件事</h2>
+		<ul class = "decimal">
+			<li>下载加载 angular.js 库</li>
+			<li>使用ng-app 指令告诉 angular 应该管理DOM中的哪一些部分（通常的一个应用只有一个ng-app,ng-app是angular应用的入口）</li>
+		</ul>
+		<pre>
+			<code>
+				<xmp>
+<!DOCTYPE html>
+<html>
+  	<head>
+	   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	   	<title>无标题文档</title>
+	    <script type="text/javascript" src="angular-1.3.0.js"></script> 
+    </head> 
+    <body>
+        <div ng-app="">
+	     	<p>在输入框中尝试输入：</p> 
+	     	<p>姓名：<input type="text" ng-model="name"></p> 
+	     	<p ng-bind="name"></p> 
+      </div> 
+    </body> 
+</html>
+				</xmp>
+			</code>
+		</pre>
+		<h2>Angularjs中常用名词 也就是所说的常用指令</h2>
+		<img src="{{site.baseurl}}/img/1.png">
+		<img src="img/2.png">
 　　</body>
 　　</html>
