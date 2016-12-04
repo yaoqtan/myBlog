@@ -1,6 +1,9 @@
             html,body{
                 background: #fff;
             }
+            body{
+                padding-bottom: 50px;
+            }
 
             .demo{
                 margin:0 40px;
@@ -13,7 +16,7 @@
                 font-size: 30px;
                 text-align: left;
             }
-            
+
             .demo h2{
                 margin-top: 20px;
                 border-bottom: 1px solid #eee;
