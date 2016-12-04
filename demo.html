@@ -56,7 +56,159 @@
 		</pre>
 		<h2>Angularjs中常用名词 也就是所说的常用指令</h2>
 		<img src="{{site.baseurl}}/img/1.png">
-		<img src="img/2.png">
+		<img src="{{site.baseurl}}/img/2.png">
+
+		<h2>ng_app ng_bind ng_model {{}}案例演示</h2>
+		<h3>ng_app：</h3>
+		<p>ng-app 指令定义了 AngularJS 应用程序的 根元素。</p>
+		<p>ng-app 指令在网页加载完毕时会自动引导（自动初始化）应用程序。</p>
+		<h3>ng-model 指令：</h3>
+		<p>ng-model 指令也可以：<br>
+		为应用程序数据提供类型验证（number、email、required）。<br> 为应用程序数据提供状态（invalid、dirty、touched、error）。<br>
+		为 HTML 元素提供 CSS 类。 绑定 HTML 元素到 HTML 表单。
+		</p>
+		<h3>{{}}等同于ng_bind</h3>
+
+		<pre>
+			<code>
+				<xmp>
+<div ng-app="">				
+	<p>在输入框中尝试输入：</p>
+	<p>姓名：<input type="text" ng-model="name"></p>
+	<div ng-bind="name"></div>
+	{{name}}
+</div>
+				</xmp>
+			</code>
+		</pre>
+		<h2>ng_init</h2>
+		<p>ng-init 指令为 AngularJS 应用程序定义了 初始值。(一般不使用他，而是用controller或模块)</p>
+		<h2>Angularjs表达式</h2>
+		<p>AngularJS 表达式写在双大括号内：{{ expression }}。<br> AngularJS 表达式把数据绑定到 HTML，这与 ng-bind 指令有异曲同工之妙。<br> AngularJS 将在表达式书写的位置"输出"数据。<br> AngularJS 表达式 很像 JavaScript 表达式：它们可以包含文字、运算符和变量。<br> 实例 {{ 5 + 5 }} 或 {{ firstName + " " + lastName }}</p>
+		<pre>
+			<code>
+				<xmp>
+<div ng-app="" ng-init="quantity=1;cost=5"> 
+	<p>总价： {{ quantity * cost }}</p> 
+</div>
+				</xmp>
+			</code>
+		</pre>
+		<h2>Angularjs控制器</h2>
+		<p>AngularJS 控制器 控制 AngularJS 应用程序的数据。</p>
+		<p>AngularJS 控制器是常规的 JavaScript 对象。</p>
+		<p>AngularJS 应用程序被控制器控制。</p>
+		<p>ng-controller 指令定义了应用程序控制器。</p>
+		<p>控制器是 JavaScript 对象，由标准的 JavaScript 对象的构造函数 创建。</p>
+		<p>控制器的 $scope 是控制器所指向的应用程序 HTML 元素。</p>
+		<p>angular中$scope是连接controllers(控制器)和templates(模板view/视图)的主要胶合体。我们可以把我们的model存放在scope上，来达到双向你绑定。</p>
+		<img src="{{site.baseurl}}/img/3.png">
+		<pre>
+			<code>
+				<xmp>
+<body ng-app ="mymodule">
+	<div ng-controller = "myDemo">
+	<input type="text" name="text" ng-model = "name" value = "test" >
+	{{name}}
+	<hello></hello>
+	</div>
+	<script type="text/javascript">
+		var APP = angular.module("mymodule",[]);
+		APP.controller('myDemo',['$scope',
+			function($scope){
+				$scope.name = "name"
+			}
+		]);
+	</script>
+</body>
+				</xmp>
+			</code>
+		</pre>
+		<h2>ng-repeat 指令结合 ng-controller</h2>
+		<pre>
+			<code>
+				<xmp>
+<body ng-app ="mymodule">
+	<div ng-controller = "myDemo">
+		<ul> <li ng-repeat="x in names"> {{ x.name + ', ' + x.country }} </li> </ul>
+	</div>
+	<script type="text/javascript">
+		var APP = angular.module("mymodule",[]);
+		APP.controller('myDemo',['$scope',
+			function($scope){
+				$scope.name = [
+					{name:'Jani',country:'Norway'},
+				    {name:'Hege',country:'Sweden'}, 
+				    {name:'Kai',country:'Denmark'} 
+			    ];
+			}
+		]);
+	</script>
+</body>
+		</xmp>
+		</code>
+		</pre>
+		<h2>$http get实例：</h2>
+		<pre>
+			<code>
+$http.get(url,{params:{id:'5'}}) .success(function(response) { 
+	$scope.names = response; 
+}).error(function(data){ //错误代码 });				<xmp>
+					
+				</xmp>
+			</code>
+		</pre>
+
+		<h2>$http post实例：</h2>
+		<pre>
+			<code>
+			<xmp>
+var postData={text:'这是post的内容'};
+var config={params:{id:'5'}}
+	$http.post(url,postData,config) .success(function(response) { 
+	$scope.names = response; 
+}).error(function(data){//错误代码 });				
+
+					
+				</xmp>
+			</code>
+		</pre>
+		<h2>Angularjs 过滤器</h2>
+		<p>AngularJS 过滤器可用于转换数据：</p>
+		<img src="{{site.baseurl}}/img/4.png">
+		<h3>向表达式添加过滤器</h3>
+		<p>过滤器可以通过一个管道字符（|）和一个过滤器添加到表达式中。</p>	
+		<pre>
+			<code>
+				<xmp>
+*uppercase 过滤器格式化字符串为大写：
+<p>姓名为 {{ person.lastName | uppercase }}</p>
+
+*lowercase 过滤器格式化字符串为小写：
+<p>姓名为 {{ person.lastName | lowercase }}</p>
+
+*currency 过滤器格式化数字为货币格式：
+<p>数量：<input type="number" ng-model="quantity"> 
+价格：<input type="number" ng-model="price"> 
+<p>总价 = {{ (quantity * price) | currency }}</p>
+</p>
+
+*向指令添加过滤器 过滤器可以通过一个管道字符（|）和一个过滤器添加到指令中。
+<li ng-repeat="x in names | orderBy:'country'"> {{ x.name + ', ' + x.country }} </li>
+
+*输入过滤器可以通过一个管道字符（|）和一个过滤器添加到指令中，
+该过滤器后跟一个冒号和一个模型名称
+<div ng-app="" ng-controller="namesController"> 
+	<p>输入过滤：</p> <p><input type="text" ng-model="name"></p> 
+	<ul> 
+		<li ng-repeat="x in names | filter:name | orderBy:'country'"> 
+		{{ (x.name | uppercase) + ', ' + x.country }} 
+		</li> 
+	</ul> 
+</div>
+				</xmp>
+			</code>
+		</pre>
 	</div>
 　　</body>
 　　</html>
