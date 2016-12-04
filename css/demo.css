@@ -1,0 +1,80 @@
+            html,body{
+                background: #fff;
+            }
+
+            .demo{
+                margin:0 40px;
+
+            }
+            .demo *{line-height: 150%;margin-top: 10px;}
+            .demo h1{
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+                font-size: 30px;
+            }
+            .demo h2{
+                margin-top: 20px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+                font-size: 26px;
+            }
+            .demo h3{
+                margin-top: 10px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+                font-size: 24px;
+            }
+            .demo h4{
+                margin-top: 10px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+                font-size: 20px;
+            }
+            .demo h5{
+                margin-top: 5px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+                font-size: 18px;
+            }
+            .demo p{
+                font-size: 14px;
+            }
+            .demo ul,.demo ul li{
+                margin-left: 10px;
+            }
+            .demo ul.disc,.demo ul.desc li{
+                list-style-type: disc;
+            }
+            .demo ul.decimal,.demo ul.decimal li{
+                list-style-type: decimal;
+            }
+            .demo pre{
+                padding: 16px;
+                overflow: auto;
+                font-size: 85%;
+                line-height: 1.45;
+                background-color: #f7f7f7;
+                border-radius: 3px;
+            }
+            .demo code{
+                display: inline;
+                max-width: auto;
+                padding: 0;
+                margin: 0;
+                overflow: visible;
+                line-height: inherit;
+                word-wrap: normal;
+                background-color: transparent;
+                border: 0;
+                font-size: 14px;
+            }
+            .demo blockquote{
+                margin: 0;
+                padding-left: 10px;
+                border-left: 3px solid #dbdbdb;
+            }
+            .demo img{
+                display: block;
+                max-width: 100%;                                
+                margin: 0 auto;
+            }

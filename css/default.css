@@ -1,5 +1,5 @@
 body{
-	margin:0;
+	margin:0 50px;
 }
 h2{
 	margin-bottom: 10px;
@@ -19,7 +19,6 @@ li,a{
     color: rgb(62, 62, 62);
     font-size: 24px;
     line-height: 25.6px;
-    background-color: rgb(255, 255, 255);
     box-sizing: border-box !important;
     word-wrap: break-word !important;
     color: #607fa6;
