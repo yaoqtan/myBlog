@@ -11,24 +11,28 @@
                 border-bottom: 1px solid #eee;
                 padding-bottom: 10px;
                 font-size: 30px;
+                text-align: left;
             }
             .demo h2{
                 margin-top: 20px;
                 border-bottom: 1px solid #eee;
                 padding-bottom: 10px;
                 font-size: 26px;
+                text-align: left;
             }
             .demo h3{
                 margin-top: 10px;
                 border-bottom: 1px solid #eee;
                 padding-bottom: 10px;
                 font-size: 24px;
+                text-align: left;
             }
             .demo h4{
                 margin-top: 10px;
                 border-bottom: 1px solid #eee;
                 padding-bottom: 10px;
                 font-size: 20px;
+                text-align: left;
             }
             .demo h5{
                 margin-top: 5px;
