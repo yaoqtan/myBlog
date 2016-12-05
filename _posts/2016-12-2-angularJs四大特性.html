@@ -1,0 +1,102 @@
+---
+layout: default
+title: AngularJs四大核心特性
+---
+<h2>{{ page.title }}</h2>
+
+<div class = demo>
+		<h1>Angular四大核心特性</h1>
+		<ul class = "decimal">
+		<li>
+			<h3>MVC</h3>
+			<img style="width: 80%;" src="{{site.baseurl}}/img/5.png">
+			<pre>
+			<code>
+<xmp>
+<body ng-app ="mymodule">
+	<div ng-controller = "myDemo">
+		<p>{{name}}</p>
+	</div>
+	<script type="text/javascript">
+		var APP = angular.module("mymodule",[]);
+		APP.controller('myDemo',['$scope',
+			function($scope){
+				$scope.name = "name"
+			}
+		]);
+	</script>
+</body>
+</xmp>
+			</code>
+		</pre>
+		<p>上例代码中，P标签充当V(视图)，mymodule函数为C(控制器)，$scope.name = "name"为M(数据模型)</p>
+		<p>使用 $cope 实现依赖注入</p>
+		</li>
+		<li>
+			<h3>模块化</h3>
+
+			<p>var APP = angular.module("mymodule",[]); 使用angular.module()方法定义模块</p>
+			<h4>一切都是从模块开始</h4>
+			<img src="{{site.baseurl}}/img/6.png" width="80%">
+			
+		</li>
+		<li>
+			<h3>指令</h3>
+			<pev>
+				<code>
+					<xmp>
+<body ng-app="myApp">
+<directive-hello></directive-hello>
+<script>
+var app = angular.module("myApp", []);
+app.directive("directiveHello", function() {
+    return {
+    	restrict:'E',
+        template : "<h1>自定义指令!</h1>",
+        replace:true
+    };
+});
+</script>
+</body>
+					</xmp>
+				</code>
+			</pev>
+			<p>restrict：通过什么方法调用指令 (默认EA)</p>
+			<ul class = "desc">
+				<li>E 作为元素名使用:<xmp><runoob-directive></runoob-directive></xmp></li>
+				<li>A 作为属性使用:<xmp><div runoob-directive></div></xmp></li>
+				<li>C 作为类名使用:<xmp><div class="runoob-directive"></div></xmp></li>
+				<li>M 作为注释使用:<xmp><!- - directive: runoob-directive - -></xmp></li>
+			</ul>
+		</li>
+		<li><h3>双向数据绑定</h3>
+		<p>视图和数据是对应的，当视图发生变化，数据模型会发生变化；当数据模型发生变化，视图自动更新。</p>
+		<p>在html中，html中发生变化的视图：表单。当表单发生变化，数据可以同步数据上</p>
+		<p>更改$scope.name的值，input标签值改变；改变input值，p标签的是值也跟着改变；从而实现双向数据绑定</p>
+		<pre>
+			<code>
+				<xmp>
+<body ng-app ="mymodule">
+	<div ng-controller = "myDemo">
+	<input type="text" name="text" ng-model = "name" value = "test" >
+	<p>{{name}}</p>
+	</div>
+	<script type="text/javascript">
+		var APP = angular.module("mymodule",[]);
+		APP.controller('myDemo',['$scope',
+			function($scope){
+				$scope.name = "name"
+			}
+		]);
+	</script>
+</body>
+				</xmp>
+			</code>
+		</pre>
+
+		</li>
+		</ul>
+		
+
+
+	</div>
