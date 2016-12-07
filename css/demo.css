@@ -45,11 +45,11 @@
                 font-size: 18px;
             }
             .demo p{
-                font-size: 15px;
+                font-size: 18px;
             }
             .demo ul,.demo ul li{
                 margin-left: 10px;
-                font-size: 15px;
+                font-size: 18px;
             }
             .demo ul.disc,.demo ul.desc li{
                 list-style-type: disc;
@@ -75,7 +75,7 @@
                 word-wrap: normal;
                 background-color: transparent;
                 border: 0;
-                font-size: 16px;
+                font-size: 18px;
             }
             .demo blockquote{
                 margin: 0;
