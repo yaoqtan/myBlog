@@ -1,0 +1,41 @@
+---
+layout: default
+title: ionic介绍
+---
+<h2>{{ page.title }}</h2>
+
+	<div class = 'demo'>
+		<p>Ionic 是一个强大的 HTML5 应用程序开发框架，号称Advanced HTML5 Hybrid Mobile App Framework 是AngularJS 移动端解决方案 可以帮助您使用 Web 技术，比如 HTML、CSS 和 Javascript 构建接近原生体验的移动应用程序。<br>Ionic 主要关注外观和体验，以及和你的应用程序的 UI 交互，特别适合用于基于 Hybird 模式的 HTML5 移动应用程序开发。 Ionic是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。为了解决其他一些UI库在手机上运行缓慢的问题。
+		</p>
+
+		<h2>学习ionic前为什么要学Angularjs</h2>
+		<ul class = "decimal">
+			<li>Ionic 整合（AngularJs integrate）AngularJs</li>
+			<li> Ionic Url routing，use AngularUI Router Ionic url路由使用AngularUI Router，可以指定不同的路由，方便开发和集成</li>
+			<li> Ionic扩展了 AngularJS指令 （AngularJS Extensions & Directives） ion-tab, ion-content, ion-nav-view, ion-header $ionicPopup,$ionicLoading, $ionicModal… </li><li>遗憾：ionic直接放弃了IOS6和Android4.1以下的版本支持，来获取更好的使用体验。</li>
+		</ul>
+
+		<h2>ionic配置环境</h2>
+		<p>配置ionic开发环境，每一步都是一个坑，经过多次失败，才配置好</p>
+		<h2>配置android开发环境</h2>
+		<ul class = "desc"> 
+			<li>下载JDK并配置Java运行环境(发现ionic不支持jdk1.7以下版本，最好使用1.8及以上版本)</li>
+			<li>下载Apache Ant 并将其bin目录路径添加进Path路径</li>
+			<li>下载sdk(我下载安装，Android Studio，自带sdk)</li>
+			<li>下载安装NodeJs</li>
+			<li>安装Ionic 和 Cordova</li>
+			<pre>
+				<code>
+运行“CMD” 键入“npm install -g cordova ionic” 根据网络环境，安装的时间有所不同。
+安装完成后，就可以创建一个Ionic项目“ionic start myApp tabs”
+进入myApp项目 “cd myApp” 
+在浏览器中运行 "ionic serve" 
+添加安装平台 “ionic platform add android” 
+编译成apk “ionic build android”
+直接在手机上进行调试“ionic run”
+				</code>
+			</pre>
+		</ul>
+		<p>详细的安装步奏，我是参考<a href = "http://www.cnblogs.com/rdst/p/4699083.html">http://www.cnblogs.com/rdst/p/4699083.html</a></p>
+		<p>安装步骤不一定按以上顺序，我先安装了nodeJs ，然后用npm 安装好Ionic Cordova,在ionic platform add android时报错后，在返回来配置jdk等环境</p>
+	</div>
