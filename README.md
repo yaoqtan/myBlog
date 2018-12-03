@@ -12,3 +12,17 @@
 	git commit -m "添加文章"
 
 	git push origin gh-pages
+	
+	
+	
+	
+	npm run start
+	npm run watch
+	
+	新创建 html js less,
+	myBlog
+	    -tempate.html
+	    src/tempate.js
+	    scr/css/tempate.less
+	    
+	

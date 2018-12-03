@@ -28,17 +28,12 @@ const getEntry = {
 
 
 const extractLess = new ExtractTextPlugin({
-    filename: "[name].css",
+    filename: "/css/[name].css",
     disable: process.env.NODE_ENV === "development"
 });
 
 
 module.exports = {
-    /*entry: path.join(__dirname, "src/index.js"),
-    output: {
-        path: path.join(__dirname, "public"),
-        filename: "xxz.js"
-    },*/
     entry:getEntry.entry('./src/',/\^*.js$/),
     output:{
         path:__dirname + '/public',
@@ -60,10 +55,5 @@ module.exports = {
     },
     plugins: [
         extractLess
-        //new ExtractTextPlugin('[name].css')
-        //if you want to pass in options, you can do so:
-        //new ExtractTextPlugin({
-        //  filename: 'style.css'
-        //})
     ]
-}
+};
