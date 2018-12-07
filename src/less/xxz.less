@@ -1,4 +1,50 @@
 body{
   min-height: 100vh;
-  background: red;
+  background: #FFAEB9;
+  font-family: "Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";
+  font-size: 14px;
+}
+.wrap{
+  width:calc(100% - 60px);
+  margin:40px 20px;
+  border-radius:4px;
+  background:white;
+  border:1px solid #D9D9D9;
+  padding:10px 8px;
+
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+
+  .img-wrap{
+    position: relative;
+    width: 100%;
+    .img1{
+      img{
+        display: block;
+      }
+    }
+    .img2{
+      width: 60px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .title{
+    width: 98%;
+    text-align: left;
+    margin:10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .dec{
+    width: 100%;
+    line-height:2;
+    padding: 10px 20px;
+  }
 }

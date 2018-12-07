@@ -1,6 +1,25 @@
 import './less/xxz.less';
 
+import lang from './lang'
 
-console.log(1234);
+let baseLang='en';
 
-console.log(process.env.NODE_ENV)
+const changeLang = ()=>{
+    if(baseLang==='en'){
+        baseLang='tc';
+    }else{
+        baseLang='en';
+    }
+    console.log(lang[baseLang]);
+
+};
+
+const langDom=document.querySelector('#lang');
+console.log(langDom)
+langDom.addEventListener('click',changeLang,false);
+
+
+
+
+
+

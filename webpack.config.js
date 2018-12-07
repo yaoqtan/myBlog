@@ -42,7 +42,14 @@ module.exports = {
     module: {
         rules: [{
             test: /\.less$/,
-            use: extractLess.extract({
+            use:[{
+                loader: "style-loader"
+                },{
+                    loader: "css-loader"
+                }, {
+                    loader: "less-loader"
+                }]
+            /*extractLess.extract({
                 use: [{
                     loader: "css-loader"
                 }, {
@@ -50,10 +57,10 @@ module.exports = {
                 }],
                 // use style-loader in development
                 fallback: "style-loader"
-            })
+            })*/
         }]
     },
     plugins: [
-        extractLess
+        //extractLess
     ]
 };
