@@ -13,12 +13,10 @@ const changeLang = ()=>{
     console.log(lang[baseLang]);
 
 };
-
+/*
 const langDom=document.querySelector('#lang');
 console.log(langDom)
-langDom.addEventListener('click',changeLang,false);
-
-
+langDom.addEventListener('click',changeLang,false);*/
 
 
 
