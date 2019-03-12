@@ -43,7 +43,7 @@ module.exports = {
         rules: [{
             test: /\.less$/,
             use:[{
-                loader: "style-loader"
+                    loader: "style-loader"
                 },{
                     loader: "css-loader"
                 }, {
